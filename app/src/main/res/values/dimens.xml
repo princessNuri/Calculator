@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_margin">18dp</dimen>
+    <dimen name="zero_dimen">0dp</dimen>
+    <dimen name="thirtysix">36dp</dimen>
+    <dimen name="big_textsize">80sp</dimen>
+    <dimen name="little_padding">6dp</dimen>
+    <dimen name="big_button_width">178dp</dimen>
+    <dimen name="thirtytwo">32dp</dimen>
+</resources>
