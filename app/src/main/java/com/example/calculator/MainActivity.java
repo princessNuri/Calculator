@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
         textView=findViewById(R.id.text_input);
         findViewById(R.id.go).setOnClickListener(view ->{
             Intent intent = new Intent(MainActivity.this,Second_activity.class);
+            intent.putExtra("key1",textView.getText().toString());
             startActivity(intent);
         });
-
 
     }
 
