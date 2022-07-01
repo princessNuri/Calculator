@@ -1,10 +1,15 @@
 package com.example.calculator;
 
+import static android.view.View.*;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.google.android.material.button.MaterialButton;
 
 import java.text.DecimalFormat;
 
@@ -14,12 +19,19 @@ public class MainActivity extends AppCompatActivity {
     private double first,second;
     private Boolean isOperationClick;
     private String operation;
+    private Boolean isShown;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView=findViewById(R.id.text_input);
+        findViewById(R.id.go).setOnClickListener(view ->{
+            Intent intent = new Intent(MainActivity.this,Second_activity.class);
+            startActivity(intent);
+        });
+
+
     }
 
     public void onNumberClick(View view) {
@@ -33,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
                     textView.append("1");
                 }
                 isOperationClick=false;
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_two:
                 if(textView.getText().toString().equals("0")){
@@ -43,6 +61,12 @@ public class MainActivity extends AppCompatActivity {
                     textView.append("2");
                 }
                 isOperationClick=false;
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_three:
                 if(textView.getText().toString().equals("0")){
@@ -53,6 +77,12 @@ public class MainActivity extends AppCompatActivity {
                     textView.append("3");
                 }
                 isOperationClick=false;
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_four:
                 if(textView.getText().toString().equals("0")){
@@ -63,6 +93,12 @@ public class MainActivity extends AppCompatActivity {
                     textView.append("4");
                 }
                 isOperationClick=false;
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_five:
                 if(textView.getText().toString().equals("0")){
@@ -73,6 +109,12 @@ public class MainActivity extends AppCompatActivity {
                     textView.append("5");
                 }
                 isOperationClick=false;
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_six:
                 if(textView.getText().toString().equals("0")){
@@ -83,6 +125,12 @@ public class MainActivity extends AppCompatActivity {
                     textView.append("6");
                 }
                 isOperationClick=false;
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_seven:
                 if(textView.getText().toString().equals("0")){
@@ -93,6 +141,12 @@ public class MainActivity extends AppCompatActivity {
                     textView.append("7");
                 }
                 isOperationClick=false;
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_eight:
                 if(textView.getText().toString().equals("0")){
@@ -103,6 +157,12 @@ public class MainActivity extends AppCompatActivity {
                     textView.append("8");
                 }
                 isOperationClick=false;
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_nine:
                 if(textView.getText().toString().equals("0")){
@@ -113,6 +173,12 @@ public class MainActivity extends AppCompatActivity {
                     textView.append("9");
                 }
                 isOperationClick=false;
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_zero:
                 if(textView.getText().toString().equals("0")){
@@ -123,16 +189,34 @@ public class MainActivity extends AppCompatActivity {
                     textView.append("0");
                 }
                 isOperationClick=false;
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_ac:
                 textView.setText("0");
                 first=0;
                 second=0;
                 isOperationClick=false;
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_point:
                 if(!textView.getText().toString().contains(".")){
                     textView.append(".");
+                    isShown=false;
+                    if(isShown){
+                        findViewById(R.id.go).setVisibility(VISIBLE);
+                    }else {
+                        findViewById(R.id.go).setVisibility(GONE);
+                    }
                     break;
                 }
         }
@@ -151,6 +235,12 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }
                 textView.setText(new DecimalFormat("##.######").format(result));
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_pos_neg:
                 first=Double.parseDouble(textView.getText().toString());
@@ -160,26 +250,56 @@ public class MainActivity extends AppCompatActivity {
                 resultW = first*(-1);
 
                 textView.setText(new DecimalFormat("##.######").format(resultW));
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_plus:
                 firstVariable();
                 isOperationClick=true;
                 operation="+";
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_minus:
                 firstVariable();
                 isOperationClick=true;
                 operation="-";
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_devide:
                 firstVariable();
                 isOperationClick=true;
                 operation="/";
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_times:
                 firstVariable();
                 isOperationClick=true;
                 operation="*";
+                isShown=false;
+                if(isShown){
+                    findViewById(R.id.go).setVisibility(VISIBLE);
+                }else {
+                    findViewById(R.id.go).setVisibility(GONE);
+                }
                 break;
             case R.id.btn_equals:
                 secondVariable();
@@ -188,20 +308,46 @@ public class MainActivity extends AppCompatActivity {
                     case"+":
                         result=first+second;
                         textView.setText(result.toString());
+                        isShown=true;
+                        if(isShown){
+                            findViewById(R.id.go).setVisibility(VISIBLE);
+                        }else {
+                            findViewById(R.id.go).setVisibility(GONE);
+                        }
                         break;
                     case"-":
                         result=first-second;
                         textView.setText(result.toString());
+                        isShown=true;
+                        if(isShown){
+                            findViewById(R.id.go).setVisibility(VISIBLE);
+                        }else {
+                            findViewById(R.id.go).setVisibility(GONE);
+                        }
                         break;
                     case"*":
                         result=first*second;
                         textView.setText(result.toString());
+                        isShown=true;
+                        if(isShown){
+                            findViewById(R.id.go).setVisibility(VISIBLE);
+                        }else {
+                            findViewById(R.id.go).setVisibility(GONE);
+                        }
                         break;
                     case"/":
                         result=first/second;
                         textView.setText(result.toString());
+                        isShown=true;
+                        if(isShown){
+                            findViewById(R.id.go).setVisibility(VISIBLE);
+                        }else {
+                            findViewById(R.id.go).setVisibility(GONE);
+                        }
                         break;
-                }break;
+                }
+                isOperationClick=true;
+                break;
 
         }
     }

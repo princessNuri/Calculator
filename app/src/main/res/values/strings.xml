@@ -20,4 +20,32 @@
     <string name="percent">%</string>
     <string name="devide">/</string>
     <string name="nol">0</string>
+    <string name="clear_all">Clear all</string>
+    <string name="clear_all_activities">Clear all activities</string>
+    <string name="go">GO</string>
+    <string name="policy">Policy</string>
+    <string-array name="Policy">
+        <item>Policy</item>
+        <item>two</item>
+        <item>three</item>
+        <item>four</item>
+    </string-array>
+    <string-array name="Category">
+        <item>Category</item>
+        <item>two</item>
+        <item>three</item>
+        <item>four</item>
+    </string-array>
+    <string-array name="Counrty">
+        <item>Counrty</item>
+        <item>two</item>
+        <item>three</item>
+        <item>four</item>
+    </string-array>
+    <string-array name="Brand">
+        <item>Brand</item>
+        <item>two</item>
+        <item>three</item>
+        <item>four</item>
+    </string-array>
 </resources>

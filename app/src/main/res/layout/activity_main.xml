@@ -11,6 +11,18 @@
         android:layout_height="@dimen/zero_dimen"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/container">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/go"
+            android:layout_marginHorizontal="@dimen/hor_mar"
+            android:layout_marginVertical="@dimen/ver_mar"
+            android:textSize="@dimen/go_btn_textsize"
+            app:cornerRadius="@dimen/go_btn"
+            android:backgroundTint="@color/teal_700"
+            android:visibility="gone"/>
         <TextView
             android:layout_gravity="bottom|end"
             android:id="@+id/text_input"

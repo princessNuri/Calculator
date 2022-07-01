@@ -7,4 +7,24 @@
     <dimen name="little_padding">6dp</dimen>
     <dimen name="big_button_width">178dp</dimen>
     <dimen name="thirtytwo">32dp</dimen>
+    <dimen name="little_layout">80dp</dimen>
+    <dimen name="little_button">40dp</dimen>
+    <dimen name="twenty">20dp</dimen>
+    <dimen name="button_radius">30dp</dimen>
+    <dimen name="red_button">80dp</dimen>
+    <dimen name="red_btn_wid">250dp</dimen>
+    <dimen name="red_btn_textsize">18sp</dimen>
+    <dimen name="red_btn_margin">500dp</dimen>
+    <dimen name="middle_textsize">32sp</dimen>
+    <dimen name="m">350dp</dimen>
+    <dimen name="icon_size">30dp</dimen>
+    <dimen name="logo_margin">185dp</dimen>
+    <dimen name="spinner_wid">350dp</dimen>
+    <dimen name="spinner_height">60dp</dimen>
+    <dimen name="go_btn">25dp</dimen>
+    <dimen name="go_btn_textsize">32sp</dimen>
+    <dimen name="hor_mar">160dp</dimen>
+    <dimen name="ver_mar">50dp</dimen>
+    <dimen name="mar_bot">30dp</dimen>
+    <dimen name="mar">20dp</dimen>
 </resources>
